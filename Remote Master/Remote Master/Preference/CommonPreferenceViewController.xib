@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CommonPreferenceViewController" customModule="Remote_Master" customModuleProvider="target">
+            <connections>
+                <outlet property="launchAtLoginSwitch" destination="Zx2-uD-CyG" id="VBb-88-iQY"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Svf-WG-cfB">
+                    <rect key="frame" x="182" y="110" width="117" height="52"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zx2-uD-CyG">
+                            <rect key="frame" x="-2" y="35" width="119" height="18"/>
+                            <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="J0M-Dj-noD">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                                <connections>
+                                    <action selector="launchAtLoginSwitchChanged:" target="-2" id="DMx-kK-d4L"/>
+                                </connections>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EpJ-h7-F2R">
+                            <rect key="frame" x="-2" y="-1" width="104" height="18"/>
+                            <buttonCell key="cell" type="check" title="Debug mode" bezelStyle="regularSquare" imagePosition="left" inset="2" id="4rF-hB-jIT">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Svf-WG-cfB" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="XSE-3V-5U9"/>
+                <constraint firstItem="Svf-WG-cfB" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="rZc-Qg-OfM"/>
+            </constraints>
+            <point key="canvasLocation" x="-150" y="123"/>
+        </customView>
+    </objects>
+</document>
