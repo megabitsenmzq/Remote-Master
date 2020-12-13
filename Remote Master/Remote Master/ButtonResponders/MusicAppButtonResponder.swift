@@ -10,11 +10,12 @@ import ScriptingBridge
 class MusicAppButtonResponder: MediaKeyButtonResponder {
     let musicScripter = MusicScripter()
     let voxScripter = VOXScripter()
+    let spotifyScripter = SpotifyScripter()
     
     var musicApp: AppScripter?
     
-    func isAnyAppRunning() -> Bool {
-        return musicScripter.isRunning() || musicScripter.isRunning()
+    func hasTarget() -> Bool {
+        return musicScripter.isPlaying() || voxScripter.isRunning() || spotifyScripter.isRunning()
     }
     
     override func buttonDidPressed() {
@@ -27,6 +28,12 @@ class MusicAppButtonResponder: MediaKeyButtonResponder {
         
         if voxScripter.isRunning() {
             musicApp = voxScripter
+            return
+        }
+        
+        if spotifyScripter.isRunning() {
+            musicApp = spotifyScripter
+            return
         }
     }
     

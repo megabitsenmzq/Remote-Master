@@ -33,6 +33,8 @@
 		C08336DE256243B300475D96 /* Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08336DD256243B300475D96 /* Public.swift */; };
 		C0B082F025862DC200758F45 /* HIDRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B082EC25862DC200758F45 /* HIDRemote.m */; };
 		C0B082F225862DC200758F45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0B082EE25862DC200758F45 /* Info.plist */; };
+		C0D41F562586523C00064AFC /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D41F552586523C00064AFC /* Spotify.swift */; };
+		C0D41F5A258652AD00064AFC /* SpotifyScripter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D41F59258652AD00064AFC /* SpotifyScripter.swift */; };
 		C0D528E3257E6D05004C1277 /* OpticalDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D528E2257E6D05004C1277 /* OpticalDrive.swift */; };
 		C0D528E7257F0082004C1277 /* AppDelegate+HIDRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D528E6257F0082004C1277 /* AppDelegate+HIDRemote.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +112,8 @@
 		C0B082EC25862DC200758F45 /* HIDRemote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDRemote.m; sourceTree = "<group>"; };
 		C0B082EE25862DC200758F45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0B082EF25862DC200758F45 /* HIDRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDRemote.h; sourceTree = "<group>"; };
+		C0D41F552586523C00064AFC /* Spotify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
+		C0D41F59258652AD00064AFC /* SpotifyScripter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyScripter.swift; sourceTree = "<group>"; };
 		C0D528E2257E6D05004C1277 /* OpticalDrive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpticalDrive.swift; sourceTree = "<group>"; };
 		C0D528E6257F0082004C1277 /* AppDelegate+HIDRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+HIDRemote.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +151,7 @@
 				C04FB3502563E64700BF23BD /* ScripterProtocol.swift */,
 				C000746A2562CB9F00475C5C /* Music (iTunes) */,
 				C07DCA622562DED700EEEC1B /* VOX */,
+				C0D41F542586522200064AFC /* Spotify */,
 			);
 			path = ScriptingBridge;
 			sourceTree = "<group>";
@@ -273,6 +278,15 @@
 				C0B082EE25862DC200758F45 /* Info.plist */,
 			);
 			path = HIDRemote;
+			sourceTree = "<group>";
+		};
+		C0D41F542586522200064AFC /* Spotify */ = {
+			isa = PBXGroup;
+			children = (
+				C0D41F552586523C00064AFC /* Spotify.swift */,
+				C0D41F59258652AD00064AFC /* SpotifyScripter.swift */,
+			);
+			path = Spotify;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,10 +449,12 @@
 				C01EF5D7256151D9002180C5 /* StatusBarItem.swift in Sources */,
 				C0B082F025862DC200758F45 /* HIDRemote.m in Sources */,
 				C07DCA572562D5FC00EEEC1B /* ScriptingBridgeProtocol.swift in Sources */,
+				C0D41F562586523C00064AFC /* Spotify.swift in Sources */,
 				C07DCA412562AFBA00EEEC1B /* MediaKeySimulate.swift in Sources */,
 				C08336DE256243B300475D96 /* Public.swift in Sources */,
 				C00074852563620400475C5C /* CommonPreferenceViewController.swift in Sources */,
 				C07DCA332562A12400EEEC1B /* ButtonResponder.swift in Sources */,
+				C0D41F5A258652AD00064AFC /* SpotifyScripter.swift in Sources */,
 				C07DCA492562B89F00EEEC1B /* MusicScripter.swift in Sources */,
 				C000746D2562CBAB00475C5C /* Music.swift in Sources */,
 				C01EF5E7256159C4002180C5 /* main.swift in Sources */,
@@ -481,6 +497,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QJN4A73F8D;
 				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = "Remote Master Helper/Info.plist";
@@ -489,6 +506,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Remote-Master-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -503,6 +521,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QJN4A73F8D;
 				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = "Remote Master Helper/Info.plist";
@@ -511,6 +530,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Remote-Master-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -648,6 +668,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Remote-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Remote Master/Bridging-Header.h";
@@ -673,6 +694,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Remote-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Remote Master/Bridging-Header.h";
