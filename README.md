@@ -19,6 +19,6 @@ Remote Master is an Apple Remote utility to enhance the IR remote control of mac
 - Apply shortcuts to remote keys.
 
 
-This app is using HIDRemote(BSDv3) to handle Apple Remote event.
+This app is using [HIDRemote(BSDv3)](https://github.com/iospirit/HIDRemote) to handle Apple Remote event.
 
 The app icon is designed by myself, you can like me on [Dribbble](https://dribbble.com/shots/14594252-Remote-Icon).
