@@ -32,7 +32,7 @@ class MusicScripter: AppScripter {
     func isPlaying() -> Bool {
         guard let music = musicApp else { return false }
         if !music.isRunning { return false }
-        return (music.playerState == MusicEPlS.playing)
+        return (music.playerState != MusicEPlS.stopped)
     }
     
     func playPause() {
