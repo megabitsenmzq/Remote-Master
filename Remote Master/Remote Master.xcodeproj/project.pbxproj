@@ -30,7 +30,7 @@
 		C07DCA5C2562D7A100EEEC1B /* MusicAppButtonResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DCA5B2562D7A100EEEC1B /* MusicAppButtonResponder.swift */; };
 		C07DCA652562DFFB00EEEC1B /* VOX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DCA632562DFFB00EEEC1B /* VOX.swift */; };
 		C07DCA6A2562E04D00EEEC1B /* VOXScripter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DCA692562E04D00EEEC1B /* VOXScripter.swift */; };
-		C08336DE256243B300475D96 /* Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08336DD256243B300475D96 /* Public.swift */; };
+		C08336DE256243B300475D96 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08336DD256243B300475D96 /* NotificationName.swift */; };
 		C0B082F025862DC200758F45 /* HIDRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B082EC25862DC200758F45 /* HIDRemote.m */; };
 		C0B082F225862DC200758F45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0B082EE25862DC200758F45 /* Info.plist */; };
 		C0B2E48026876937005E5E25 /* PlayerMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0B2E47F26876937005E5E25 /* PlayerMenuItemView.xib */; };
@@ -38,6 +38,8 @@
 		C0B2E48426876EDD005E5E25 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2E48326876EDD005E5E25 /* NibLoadable.swift */; };
 		C0B2E4882687738B005E5E25 /* AirTunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B2E485268772FB005E5E25 /* AirTunes.framework */; };
 		C0B2E4892687738B005E5E25 /* AirTunes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0B2E485268772FB005E5E25 /* AirTunes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C0B2E48C26877B87005E5E25 /* AirTunesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2E48B26877B87005E5E25 /* AirTunesHandler.swift */; };
+		C0B2E48E26878D73005E5E25 /* PlayerMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2E48D26878D73005E5E25 /* PlayerMenuItemViewController.swift */; };
 		C0D41F562586523C00064AFC /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D41F552586523C00064AFC /* Spotify.swift */; };
 		C0D41F5A258652AD00064AFC /* SpotifyScripter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D41F59258652AD00064AFC /* SpotifyScripter.swift */; };
 		C0D528E3257E6D05004C1277 /* OpticalDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D528E2257E6D05004C1277 /* OpticalDrive.swift */; };
@@ -114,7 +116,7 @@
 		C07DCA5B2562D7A100EEEC1B /* MusicAppButtonResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAppButtonResponder.swift; sourceTree = "<group>"; };
 		C07DCA632562DFFB00EEEC1B /* VOX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOX.swift; sourceTree = "<group>"; };
 		C07DCA692562E04D00EEEC1B /* VOXScripter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOXScripter.swift; sourceTree = "<group>"; };
-		C08336DD256243B300475D96 /* Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Public.swift; sourceTree = "<group>"; };
+		C08336DD256243B300475D96 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		C0B082EC25862DC200758F45 /* HIDRemote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDRemote.m; sourceTree = "<group>"; };
 		C0B082EE25862DC200758F45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0B082EF25862DC200758F45 /* HIDRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDRemote.h; sourceTree = "<group>"; };
@@ -122,6 +124,8 @@
 		C0B2E48126876D1B005E5E25 /* PlayerMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMenuItemView.swift; sourceTree = "<group>"; };
 		C0B2E48326876EDD005E5E25 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		C0B2E485268772FB005E5E25 /* AirTunes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AirTunes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B2E48B26877B87005E5E25 /* AirTunesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTunesHandler.swift; sourceTree = "<group>"; };
+		C0B2E48D26878D73005E5E25 /* PlayerMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMenuItemViewController.swift; sourceTree = "<group>"; };
 		C0D41F552586523C00064AFC /* Spotify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
 		C0D41F59258652AD00064AFC /* SpotifyScripter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyScripter.swift; sourceTree = "<group>"; };
 		C0D528E2257E6D05004C1277 /* OpticalDrive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpticalDrive.swift; sourceTree = "<group>"; };
@@ -216,10 +220,10 @@
 				C04FB3582564037B00BF23BD /* Preference */,
 				C01EF5D6256151D9002180C5 /* StatusBarItem.swift */,
 				C01EF5EA25615A40002180C5 /* StatusBarMenu.swift */,
+				C0B2E48B26877B87005E5E25 /* AirTunesHandler.swift */,
 				C0D528E6257F0082004C1277 /* AppDelegate+HIDRemote.swift */,
 				C01EF59E25614998002180C5 /* AppDelegate.swift */,
-				C08336DD256243B300475D96 /* Public.swift */,
-				C0B2E48326876EDD005E5E25 /* NibLoadable.swift */,
+				C0B2E48A26877B45005E5E25 /* Public */,
 				C01EF5D9256151E1002180C5 /* Supporting Files */,
 			);
 			path = "Remote Master";
@@ -299,8 +303,18 @@
 			children = (
 				C0B2E47F26876937005E5E25 /* PlayerMenuItemView.xib */,
 				C0B2E48126876D1B005E5E25 /* PlayerMenuItemView.swift */,
+				C0B2E48D26878D73005E5E25 /* PlayerMenuItemViewController.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		C0B2E48A26877B45005E5E25 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				C08336DD256243B300475D96 /* NotificationName.swift */,
+				C0B2E48326876EDD005E5E25 /* NibLoadable.swift */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 		C0D41F542586522200064AFC /* Spotify */ = {
@@ -473,17 +487,19 @@
 				C07DCA6A2562E04D00EEEC1B /* VOXScripter.swift in Sources */,
 				C01EF5D7256151D9002180C5 /* StatusBarItem.swift in Sources */,
 				C0B082F025862DC200758F45 /* HIDRemote.m in Sources */,
+				C0B2E48C26877B87005E5E25 /* AirTunesHandler.swift in Sources */,
 				C0B2E48426876EDD005E5E25 /* NibLoadable.swift in Sources */,
 				C07DCA572562D5FC00EEEC1B /* ScriptingBridgeProtocol.swift in Sources */,
 				C0D41F562586523C00064AFC /* Spotify.swift in Sources */,
 				C07DCA412562AFBA00EEEC1B /* MediaKeySimulate.swift in Sources */,
-				C08336DE256243B300475D96 /* Public.swift in Sources */,
+				C08336DE256243B300475D96 /* NotificationName.swift in Sources */,
 				C00074852563620400475C5C /* CommonPreferenceViewController.swift in Sources */,
 				C07DCA332562A12400EEEC1B /* ButtonResponder.swift in Sources */,
 				C0D41F5A258652AD00064AFC /* SpotifyScripter.swift in Sources */,
 				C07DCA492562B89F00EEEC1B /* MusicScripter.swift in Sources */,
 				C000746D2562CBAB00475C5C /* Music.swift in Sources */,
 				C01EF5E7256159C4002180C5 /* main.swift in Sources */,
+				C0B2E48E26878D73005E5E25 /* PlayerMenuItemViewController.swift in Sources */,
 				C01EF59F25614998002180C5 /* AppDelegate.swift in Sources */,
 				C0D528E3257E6D05004C1277 /* OpticalDrive.swift in Sources */,
 				C07DCA392562AA4700EEEC1B /* MediaKeyButtonResponder.swift in Sources */,

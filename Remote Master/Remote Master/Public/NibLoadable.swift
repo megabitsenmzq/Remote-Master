@@ -2,7 +2,7 @@
 //  NibLoadable.swift
 //  Remote Master
 //
-//  Created by 孟金羽 on 2021/06/26.
+//  Created by Jinyu Meng on 2021/06/26.
 //
 
 import Foundation

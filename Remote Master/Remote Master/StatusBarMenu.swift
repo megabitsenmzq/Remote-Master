@@ -11,9 +11,10 @@ class StatusBarMenu {
     let menu = NSMenu()
     
     init() {
-        let playerView = PlayerMenuItemView.createFromNib()
+        
+        let playerVC = PlayerMenuItemViewController.init(nibName: "PlayerMenuItemView", bundle: nil)
         let playerItem = NSMenuItem()
-        playerItem.view = playerView
+        playerItem.view = playerVC.view
         menu.addItem(playerItem)
         
         menu.addItem(NSMenuItem.separator())

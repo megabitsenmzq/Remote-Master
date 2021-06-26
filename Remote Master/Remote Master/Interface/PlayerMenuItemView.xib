@@ -6,17 +6,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="PlayerMenuItemView" customModule="Remote_Master" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="PlayerMenuItemViewController" customModule="Remote_Master" customModuleProvider="target">
             <connections>
-                <outlet property="ArtistAlbumView" destination="D2f-1E-B6i" id="kLS-Tc-QiU"/>
-                <outlet property="coverImageView" destination="YOA-BJ-AL1" id="c3k-Vm-oc3"/>
-                <outlet property="progressBarView" destination="qzb-gU-mkB" id="Fmq-7E-afC"/>
-                <outlet property="titleLabel" destination="MR5-JY-dSL" id="6e6-Us-9jh"/>
+                <outlet property="view" destination="c22-O7-iKe" id="Nrk-65-4J4"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="c22-O7-iKe" customClass="PlayerMenuItemView" customModule="Remote_Master" customModuleProvider="target">
+        <customView identifier="PlayerMenuItemView" id="c22-O7-iKe" customClass="PlayerMenuItemView" customModule="Remote_Master" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
@@ -28,7 +25,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="VpY-qT-KD3"/>
                 </imageView>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="M6C-nW-uRI" userLabel="Control View">
-                    <rect key="frame" x="70" y="0.0" width="220" height="60"/>
+                    <rect key="frame" x="75" y="0.0" width="215" height="60"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MR5-JY-dSL">
                             <rect key="frame" x="3" y="41" width="27" height="14"/>
@@ -47,7 +44,7 @@
                             </textFieldCell>
                         </textField>
                         <progressIndicator maxValue="100" doubleValue="50" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="qzb-gU-mkB">
-                            <rect key="frame" x="5" y="-1" width="210" height="20"/>
+                            <rect key="frame" x="5" y="-1" width="205" height="20"/>
                         </progressIndicator>
                     </subviews>
                     <constraints>
@@ -67,10 +64,16 @@
                 <constraint firstItem="M6C-nW-uRI" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="LFy-Be-5vT"/>
                 <constraint firstItem="YOA-BJ-AL1" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="MHi-AQ-Tuf"/>
                 <constraint firstItem="YOA-BJ-AL1" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="S5L-Jf-rO7"/>
-                <constraint firstItem="M6C-nW-uRI" firstAttribute="leading" secondItem="YOA-BJ-AL1" secondAttribute="trailing" id="Sm5-Fw-xip"/>
+                <constraint firstItem="M6C-nW-uRI" firstAttribute="leading" secondItem="YOA-BJ-AL1" secondAttribute="trailing" constant="5" id="Sm5-Fw-xip"/>
                 <constraint firstItem="M6C-nW-uRI" firstAttribute="height" secondItem="c22-O7-iKe" secondAttribute="height" id="jJe-k1-1bh"/>
                 <constraint firstAttribute="trailing" secondItem="M6C-nW-uRI" secondAttribute="trailing" constant="10" id="nmx-Du-KhX"/>
             </constraints>
+            <connections>
+                <outlet property="artistAlbumView" destination="D2f-1E-B6i" id="9iZ-xl-hTr"/>
+                <outlet property="coverImageView" destination="YOA-BJ-AL1" id="JrE-tE-NHx"/>
+                <outlet property="progressBarView" destination="qzb-gU-mkB" id="NYa-MU-qgK"/>
+                <outlet property="titleLabel" destination="MR5-JY-dSL" id="L2s-vk-PHg"/>
+            </connections>
             <point key="canvasLocation" x="50" y="48"/>
         </customView>
     </objects>
