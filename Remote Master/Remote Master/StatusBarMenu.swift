@@ -11,6 +11,12 @@ class StatusBarMenu {
     let menu = NSMenu()
     
     init() {
+        let playerView = PlayerMenuItemView.createFromNib()
+        let playerItem = NSMenuItem()
+        playerItem.view = playerView
+        menu.addItem(playerItem)
+        
+        menu.addItem(NSMenuItem.separator())
         menu.addItem(menuItem(title: "Debug Action", action: #selector(debugAction), target: self))
         menu.addItem(menuItem(title: "Preference", action: #selector(showPreference), target: self))
         menu.addItem(menuItem(title: "Quit", action: #selector(quit), target: self))

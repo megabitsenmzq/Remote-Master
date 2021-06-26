@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import AirTunes
 
 let remote = HIDRemote()
 let statusBarItem = StatusBarItem()
@@ -13,6 +14,8 @@ let statusBarItem = StatusBarItem()
 var currentButtonResponder: ButtonResponder?
 var mediaKeyButtonResponder = MediaKeyButtonResponder()
 var musicAppButtonResponder = MusicAppButtonResponder()
+
+var service: AirTunes?
 
 //@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -25,6 +28,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         remote.startControl(kHIDRemoteModeExclusive)
         
         currentButtonResponder = mediaKeyButtonResponder
+        
+        let currentHost = Host.current().localizedName ?? "Remote Master"
+        service = AirTunes(name: currentHost)
+        service!.start()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -1,0 +1,3 @@
+[submodule "Remote Master/airtunes"]
+	path = Remote Master/airtunes
+	url = https://github.com/megabitsenmzq/airtunes

@@ -33,6 +33,11 @@
 		C08336DE256243B300475D96 /* Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08336DD256243B300475D96 /* Public.swift */; };
 		C0B082F025862DC200758F45 /* HIDRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B082EC25862DC200758F45 /* HIDRemote.m */; };
 		C0B082F225862DC200758F45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0B082EE25862DC200758F45 /* Info.plist */; };
+		C0B2E48026876937005E5E25 /* PlayerMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0B2E47F26876937005E5E25 /* PlayerMenuItemView.xib */; };
+		C0B2E48226876D1B005E5E25 /* PlayerMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2E48126876D1B005E5E25 /* PlayerMenuItemView.swift */; };
+		C0B2E48426876EDD005E5E25 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2E48326876EDD005E5E25 /* NibLoadable.swift */; };
+		C0B2E4882687738B005E5E25 /* AirTunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B2E485268772FB005E5E25 /* AirTunes.framework */; };
+		C0B2E4892687738B005E5E25 /* AirTunes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0B2E485268772FB005E5E25 /* AirTunes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0D41F562586523C00064AFC /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D41F552586523C00064AFC /* Spotify.swift */; };
 		C0D41F5A258652AD00064AFC /* SpotifyScripter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D41F59258652AD00064AFC /* SpotifyScripter.swift */; };
 		C0D528E3257E6D05004C1277 /* OpticalDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D528E2257E6D05004C1277 /* OpticalDrive.swift */; };
@@ -64,6 +69,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C01EF5C625614BDA002180C5 /* HIDRemote.framework in Embed Frameworks */,
+				C0B2E4892687738B005E5E25 /* AirTunes.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +118,10 @@
 		C0B082EC25862DC200758F45 /* HIDRemote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDRemote.m; sourceTree = "<group>"; };
 		C0B082EE25862DC200758F45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0B082EF25862DC200758F45 /* HIDRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDRemote.h; sourceTree = "<group>"; };
+		C0B2E47F26876937005E5E25 /* PlayerMenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerMenuItemView.xib; sourceTree = "<group>"; };
+		C0B2E48126876D1B005E5E25 /* PlayerMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMenuItemView.swift; sourceTree = "<group>"; };
+		C0B2E48326876EDD005E5E25 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		C0B2E485268772FB005E5E25 /* AirTunes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AirTunes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D41F552586523C00064AFC /* Spotify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
 		C0D41F59258652AD00064AFC /* SpotifyScripter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyScripter.swift; sourceTree = "<group>"; };
 		C0D528E2257E6D05004C1277 /* OpticalDrive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpticalDrive.swift; sourceTree = "<group>"; };
@@ -131,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01EF5C525614BDA002180C5 /* HIDRemote.framework in Frameworks */,
+				C0B2E4882687738B005E5E25 /* AirTunes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +209,7 @@
 		C01EF59D25614998002180C5 /* Remote Master */ = {
 			isa = PBXGroup;
 			children = (
+				C0B2E47C268768CF005E5E25 /* Interface */,
 				C07DCA472562B76B00EEEC1B /* ButtonResponders */,
 				C00074682562CB7900475C5C /* ScriptingBridge */,
 				C07DCA452562B74C00EEEC1B /* Tools */,
@@ -207,6 +219,7 @@
 				C0D528E6257F0082004C1277 /* AppDelegate+HIDRemote.swift */,
 				C01EF59E25614998002180C5 /* AppDelegate.swift */,
 				C08336DD256243B300475D96 /* Public.swift */,
+				C0B2E48326876EDD005E5E25 /* NibLoadable.swift */,
 				C01EF5D9256151E1002180C5 /* Supporting Files */,
 			);
 			path = "Remote Master";
@@ -227,6 +240,7 @@
 		C04FB3252563917D00BF23BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0B2E485268772FB005E5E25 /* AirTunes.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -278,6 +292,15 @@
 				C0B082EE25862DC200758F45 /* Info.plist */,
 			);
 			path = HIDRemote;
+			sourceTree = "<group>";
+		};
+		C0B2E47C268768CF005E5E25 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C0B2E47F26876937005E5E25 /* PlayerMenuItemView.xib */,
+				C0B2E48126876D1B005E5E25 /* PlayerMenuItemView.swift */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 		C0D41F542586522200064AFC /* Spotify */ = {
@@ -365,7 +388,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					C000748C25636D4200475C5C = {
 						CreatedOnToolsVersion = 12.2;
@@ -412,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C00074802563575B00475C5C /* PreferenceWindowController.xib in Resources */,
+				C0B2E48026876937005E5E25 /* PlayerMenuItemView.xib in Resources */,
 				C00074862563620400475C5C /* CommonPreferenceViewController.xib in Resources */,
 				C0B082F225862DC200758F45 /* Info.plist in Resources */,
 				C01EF5A325614999002180C5 /* Assets.xcassets in Resources */,
@@ -443,11 +467,13 @@
 				C0D528E7257F0082004C1277 /* AppDelegate+HIDRemote.swift in Sources */,
 				C07DCA5C2562D7A100EEEC1B /* MusicAppButtonResponder.swift in Sources */,
 				C04FB3512563E64700BF23BD /* ScripterProtocol.swift in Sources */,
+				C0B2E48226876D1B005E5E25 /* PlayerMenuItemView.swift in Sources */,
 				C01EF5EB25615A40002180C5 /* StatusBarMenu.swift in Sources */,
 				C000747F2563575B00475C5C /* PreferenceWindowController.swift in Sources */,
 				C07DCA6A2562E04D00EEEC1B /* VOXScripter.swift in Sources */,
 				C01EF5D7256151D9002180C5 /* StatusBarItem.swift in Sources */,
 				C0B082F025862DC200758F45 /* HIDRemote.m in Sources */,
+				C0B2E48426876EDD005E5E25 /* NibLoadable.swift in Sources */,
 				C07DCA572562D5FC00EEEC1B /* ScriptingBridgeProtocol.swift in Sources */,
 				C0D41F562586523C00064AFC /* Spotify.swift in Sources */,
 				C07DCA412562AFBA00EEEC1B /* MediaKeySimulate.swift in Sources */,
@@ -658,12 +684,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Remote Master/Remote_Master.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = QJN4A73F8D;
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Remote Master/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -686,12 +712,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Remote Master/Remote_Master.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = QJN4A73F8D;
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Remote Master/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
