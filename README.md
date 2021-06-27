@@ -10,9 +10,9 @@ Remote Master is an Apple Remote utility to enhance the IR remote control of mac
 ## Current working features:
 
 - Control any media player application that can monitor media keys.
-- Control priority lets you control iTunes only when it’s playing. VOX will be the next. If both of them are not running, it will control another app that is monitoring the media keys.
+- Control applications with priority. If one application is not playing, it will send the event to the next app. For now, the first app will be iTunes, then VOX, then other apps.
 - Long press the menu button to eject the optical drive.
-- With the embedded AirTunes server, you can play your music remotely using AirPlay.
+- Built-in AirPlay audio server.
 
 ## Plans:
 
