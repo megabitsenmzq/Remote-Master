@@ -9,7 +9,7 @@ import Foundation
 
 class AirTunesButtonResponder: MediaKeyButtonResponder {
     override func leftPressed() {
-        airTunesHandler.playPause()
+        airTunesHandler.previous()
     }
     
     override func rightPressed() {
@@ -17,6 +17,6 @@ class AirTunesButtonResponder: MediaKeyButtonResponder {
     }
     
     override func centerPressed() {
-        airTunesHandler.previous()
+        airTunesHandler.playPause()
     }
 }
