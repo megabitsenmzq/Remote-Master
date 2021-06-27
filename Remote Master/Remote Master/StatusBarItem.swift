@@ -68,9 +68,7 @@ class StatusBarItem {
             indicatorTimer?.invalidate()
             indicatorTimer = nil
             if !needToWaitButtonUpEvent {
-                indicatorTimer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false, block: { _ in
-                    self.statusItem.button?.image = NSImage(named: IconState.normal.rawValue)
-                })
+                indicatorTimer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(iconBackToNormal), userInfo: nil, repeats: false)
             }
             
             statusItem.button?.image = NSImage(named: iconStateFromButtonCode(buttonCode).rawValue)
@@ -79,5 +77,9 @@ class StatusBarItem {
                 statusItem.button?.image = NSImage(named: IconState.normal.rawValue)
             }
         }
+    }
+    
+    @objc func iconBackToNormal() {
+        statusItem.button?.image = NSImage(named: IconState.normal.rawValue)
     }
 }
