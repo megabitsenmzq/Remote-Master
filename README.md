@@ -3,7 +3,7 @@
 [![Platforms macOS](https://img.shields.io/badge/Platforms-macOS-purple.svg?style=flat)](http://www.apple.com/macos/)
 [![License GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html)
 
-Remote Master is an Apple Remote utility to enhance the IR remote control of macOS. It has some useful features and still under construction. 
+Remote Master is an Apple Remote utility to enhance the IR remote control of macOS. It has some useful features and still under construction. (for macOS 10.11 and above)
 
 ## Current working features:
 
