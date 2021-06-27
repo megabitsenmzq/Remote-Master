@@ -16,7 +16,9 @@ extension AppDelegate: HIDRemoteDelegate {
         guard isPressed else { return }
         
         //Switch current responder on the fly
-        if musicAppButtonResponder.hasTarget() {
+        if airTunesHandler.isActive {
+            currentButtonResponder = airTunesButtonResponder
+        } else if musicAppButtonResponder.hasTarget() {
             currentButtonResponder = musicAppButtonResponder
         } else {
             currentButtonResponder = mediaKeyButtonResponder

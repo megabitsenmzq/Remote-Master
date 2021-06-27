@@ -40,6 +40,7 @@
 		C0B2E4892687738B005E5E25 /* AirTunes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0B2E485268772FB005E5E25 /* AirTunes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0B2E48C26877B87005E5E25 /* AirTunesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2E48B26877B87005E5E25 /* AirTunesHandler.swift */; };
 		C0B2E48E26878D73005E5E25 /* PlayerMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2E48D26878D73005E5E25 /* PlayerMenuItemViewController.swift */; };
+		C0B2E49026883D9E005E5E25 /* AirTunesButtonResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2E48F26883D9E005E5E25 /* AirTunesButtonResponder.swift */; };
 		C0D41F562586523C00064AFC /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D41F552586523C00064AFC /* Spotify.swift */; };
 		C0D41F5A258652AD00064AFC /* SpotifyScripter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D41F59258652AD00064AFC /* SpotifyScripter.swift */; };
 		C0D528E3257E6D05004C1277 /* OpticalDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D528E2257E6D05004C1277 /* OpticalDrive.swift */; };
@@ -126,6 +127,7 @@
 		C0B2E485268772FB005E5E25 /* AirTunes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AirTunes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B2E48B26877B87005E5E25 /* AirTunesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTunesHandler.swift; sourceTree = "<group>"; };
 		C0B2E48D26878D73005E5E25 /* PlayerMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMenuItemViewController.swift; sourceTree = "<group>"; };
+		C0B2E48F26883D9E005E5E25 /* AirTunesButtonResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTunesButtonResponder.swift; sourceTree = "<group>"; };
 		C0D41F552586523C00064AFC /* Spotify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
 		C0D41F59258652AD00064AFC /* SpotifyScripter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyScripter.swift; sourceTree = "<group>"; };
 		C0D528E2257E6D05004C1277 /* OpticalDrive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpticalDrive.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				C07DCA322562A12400EEEC1B /* ButtonResponder.swift */,
 				C07DCA382562AA4700EEEC1B /* MediaKeyButtonResponder.swift */,
 				C07DCA5B2562D7A100EEEC1B /* MusicAppButtonResponder.swift */,
+				C0B2E48F26883D9E005E5E25 /* AirTunesButtonResponder.swift */,
 			);
 			path = ButtonResponders;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				C01EF5D7256151D9002180C5 /* StatusBarItem.swift in Sources */,
 				C0B082F025862DC200758F45 /* HIDRemote.m in Sources */,
 				C0B2E48C26877B87005E5E25 /* AirTunesHandler.swift in Sources */,
+				C0B2E49026883D9E005E5E25 /* AirTunesButtonResponder.swift in Sources */,
 				C0B2E48426876EDD005E5E25 /* NibLoadable.swift in Sources */,
 				C07DCA572562D5FC00EEEC1B /* ScriptingBridgeProtocol.swift in Sources */,
 				C0D41F562586523C00064AFC /* Spotify.swift in Sources */,
@@ -703,7 +707,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = QJN4A73F8D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Remote Master/Info.plist";
@@ -712,7 +716,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Remote-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Remote Master/Bridging-Header.h";
@@ -731,7 +735,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = QJN4A73F8D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Remote Master/Info.plist";
@@ -740,7 +744,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JinyuMeng.Remote-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Remote Master/Bridging-Header.h";

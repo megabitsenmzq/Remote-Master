@@ -16,6 +16,8 @@ class AirTunesHandler: ABPlayerServiceDelegate {
     var playerInfo: ABPlayerInfo?
     var trackInfo: ABTrackInfo?
     
+    var isActive: Bool { return trackInfo?.duration != -1 }
+    
     init() {
         let currentHost = Host.current().localizedName ?? "Remote Master"
         airTunes = AirTunes(name: currentHost)
@@ -23,6 +25,10 @@ class AirTunesHandler: ABPlayerServiceDelegate {
         service = airTunes as ABPlayerService
         service.delegate = self
     }
+    
+    func playPause() { service.play() }
+    func next() { service.next() }
+    func previous() { service.previous() }
     
     func playerService(_ playerService: ABPlayerService, didChangeTrackInfo trackInfo: ABTrackInfo) {
         DispatchQueue.main.async {
@@ -39,7 +45,7 @@ class AirTunesHandler: ABPlayerServiceDelegate {
         }
     }
     
-    func setVolume(_ volume: Double) { //https://stackoverflow.com/questions/27290751/
+    private func setVolume(_ volume: Double) { //https://stackoverflow.com/questions/27290751/
         let vol = (volume + 30) / 30
         
         var defaultOutputDeviceID = AudioDeviceID(0)

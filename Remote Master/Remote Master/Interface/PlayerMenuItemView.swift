@@ -17,12 +17,22 @@ class PlayerMenuItemView: NSView, NibLoadable {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         NotificationCenter.default.addObserver(self, selector: #selector(updatePlayer), name: .airTunesTrackInfoChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updatePlayer), name: .airTunesPlayerInfoChanged, object: nil)
     }
     
     @objc func updatePlayer() {
-        coverImageView.image = airTunesHandler.trackInfo?.artwork
-        titleLabel.stringValue = airTunesHandler.trackInfo?.name ?? "Unknown"
-        artistAlbumView.stringValue = "\(airTunesHandler.trackInfo?.album ?? "Unknown") - \(airTunesHandler.trackInfo?.artist ?? "Unknown")"
+        guard let trackInfo = airTunesHandler.trackInfo else { return }
+        if airTunesHandler.isActive {
+            coverImageView.image = trackInfo.artwork
+            titleLabel.stringValue = trackInfo.name
+            artistAlbumView.stringValue = "\(trackInfo.album) - \(trackInfo.artist)"
+            progressBarView.doubleValue = trackInfo.position / trackInfo.duration * 100
+        } else {
+            coverImageView.image = NSImage(named: "Cover")
+            titleLabel.stringValue = "Remote Master"
+            artistAlbumView.stringValue = "AirPlay server is running."
+            progressBarView.doubleValue = 100
+        }
     }
     
     

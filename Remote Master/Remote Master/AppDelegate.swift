@@ -14,6 +14,10 @@ let airTunesHandler = AirTunesHandler()
 var currentButtonResponder: ButtonResponder?
 var mediaKeyButtonResponder = MediaKeyButtonResponder()
 var musicAppButtonResponder = MusicAppButtonResponder()
+var airTunesButtonResponder = AirTunesButtonResponder()
+
+var isDebugModeEnabled = UserDefaults.standard.bool(forKey: "preference.DebugMode") {
+    didSet { UserDefaults.standard.setValue(isDebugModeEnabled, forKey: "preference.DebugMode") }}
 
 //@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
