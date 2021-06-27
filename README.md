@@ -5,6 +5,8 @@
 
 Remote Master is an Apple Remote utility to enhance the IR remote control of macOS. It has some useful features and still under construction. (for macOS 10.11 and above)
 
+![Screenshot](screenshot.png)
+
 ## Current working features:
 
 - Control any media player application that can monitor media keys.
