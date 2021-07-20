@@ -16,7 +16,10 @@ class AirTunesHandler: ABPlayerServiceDelegate {
     var playerInfo: ABPlayerInfo?
     var trackInfo: ABTrackInfo?
     
-    var isActive: Bool { return trackInfo?.duration != -1 }
+    var isActive: Bool {
+        guard let duration = trackInfo?.duration else { return false }
+        return duration != -1
+    }
     
     init() {
         let currentHost = Host.current().localizedName ?? "Remote Master"
