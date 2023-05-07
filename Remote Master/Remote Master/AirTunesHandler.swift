@@ -71,7 +71,7 @@ class AirTunesHandler: ABPlayerServiceDelegate {
         let volumeSize = UInt32(MemoryLayout.size(ofValue: volume))
 
         var volumePropertyAddress = AudioObjectPropertyAddress(
-            mSelector: kAudioHardwareServiceDeviceProperty_VirtualMasterVolume,
+            mSelector: kAudioHardwareServiceDeviceProperty_VirtualMainVolume,
             mScope: kAudioDevicePropertyScopeOutput,
             mElement: kAudioObjectPropertyElementMaster)
 

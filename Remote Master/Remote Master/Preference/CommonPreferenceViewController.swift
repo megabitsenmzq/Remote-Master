@@ -19,9 +19,26 @@ class CommonPreferenceViewController: NSViewController {
         isLaunchAtLoginEnabled = (sender.state == .on)
         let helperIdentifier = "com.JinyuMeng.Remote-Master-Helper"
         
-        //Tell OS to add login item.
-        if !SMLoginItemSetEnabled(helperIdentifier as CFString, isLaunchAtLoginEnabled) {
-            sender.state = isLaunchAtLoginEnabled ? .off : .on //fail
+        if #available(macOS 13.0, *) {
+            SMLoginItemSetEnabled(helperIdentifier as CFString, false)
+            if isLaunchAtLoginEnabled {
+                do {
+                    try SMAppService.mainApp.register()
+                } catch {
+                    print("register failed:\(error)")
+                }
+            } else {
+                do {
+                    try SMAppService.mainApp.unregister()
+                } catch {
+                    print("unregister failed:\(error)")
+                }
+            }
+        } else {
+            //Tell OS to add login item.
+            if !SMLoginItemSetEnabled(helperIdentifier as CFString, isLaunchAtLoginEnabled) {
+                sender.state = isLaunchAtLoginEnabled ? .off : .on //fail
+            }
         }
     }
     
